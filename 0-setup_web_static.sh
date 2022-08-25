@@ -18,6 +18,6 @@ ln -sf /data/web_static/releases/test/ /data/web_static/current
 
 chown -hR ubuntu:ubuntu /data
 
-grep -qxF $'\tlocation /hbnb_static/' /etc/nginx/sites-available/default || sed -i '/^\tserver_name/ a\\n\tlocation \/hbnb_static/ {\n\t\talias /data/web_static/current/;\n\t}' /etc/nginx/sites-available/default
+sed -i '/^\tserver_name/ a\\n\tlocation \/hbnb_static/ {\n\t\talias /data/web_static/current/;\n\t}' /etc/nginx/sites-available/default
 
 service nginx restart
