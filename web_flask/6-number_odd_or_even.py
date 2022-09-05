@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""""""
+"""script that starts a Flask web application"""
 
 from cgitb import html
 from flask import Flask, render_template
@@ -8,38 +8,39 @@ app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def hello():
-    """"""
+    """displays “Hello HBNB!”"""
     return 'Hello HBNB!'
 
 @app.route('/hbnb', strict_slashes=False)
 def holberton():
-    """"""
+    """displays “HBNB”"""
     return 'HBNB'
 
 @app.route('/c/<text>', strict_slashes=False)
 def cisfun(text):
-    """"""
+    """displays “C ” followed by the value of the text variable"""
     return 'C ' + text.replace("_", " ")
     
 @app.route('/python/<text>', strict_slashes=False)
 @app.route('/python', strict_slashes=False)
 def pythonis(text='is cool'):
-    """"""
+    """displays “Python ”, followed by the value of the text variable"""
     return 'Python ' + text.replace("_", " ")
 
 @app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
-    """"""
+    """displays “n is a number” only if n is an integer"""
     return '{} is a number'.format(n)
     
 @app.route('/number_template/<int:n>', strict_slashes=False)
 def numberTemplate(n):
-    """"""
+    """displays a HTML page only if n is an integer"""
     return render_template('5-number.html', number = n)
 
 @app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
 def oddOrEven(n):
-    """"""
+    """displays a HTML page only if n is an integer and adds text (odd/even) 
+    to html template"""
     if n % 2 == 0:
         oddOrEven = '{} is even'.format(n)
     else:
