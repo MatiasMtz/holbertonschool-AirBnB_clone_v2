@@ -1,0 +1,15 @@
+footer {
+	background-color: white;
+	height: 60px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	text-align: center;
+	line-height: 3.75rem;
+	vertical-align: middle;
+	border-top-style: solid;
+	border-top-color: #CCCCCC;
+	border-top-width: 1px;
+}
