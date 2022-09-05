@@ -12,7 +12,7 @@ def remSqlalchemy(self):
 
 
 @app.route("/hbnb_filters", strict_slashes=False)
-def filters():
+def hbnb_filters():
     states = storage.all("State").values()
     amenities = storage.all("Amenity").values()
     return render_template('10-hbnb_filters.html', states=states, amenities=amenities)
