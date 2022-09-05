@@ -12,10 +12,10 @@ def remSqlalchemy(self):
 
 
 @app.route('/states_list', strict_slashes=False)
-def hello():
-    """displays “Hello HBNB!”"""
+def statesList():
+    """Displays a State list"""
     states=storage.all("State").values()
-    return render_template('6-number_odd_or_even.html', states=states)
+    return render_template('7-states_list', states=states)
 
 
 if __name__ == '__main__':
