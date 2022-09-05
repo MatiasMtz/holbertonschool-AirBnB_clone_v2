@@ -19,7 +19,7 @@ def statesList():
 
 
 @app.route('/states/<id>', strict_slashes=False)
-def statesList():
+def stateByID():
     """shows an specific state"""
     states = storage.all("State").values()
     for state in states:
