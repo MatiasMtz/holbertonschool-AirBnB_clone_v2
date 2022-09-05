@@ -15,8 +15,6 @@ def remSqlalchemy(self):
 def statesList():
     """Displays a State list"""
     states = storage.all("State").values()
-    for state in states:
-        print(state)
     return render_template('7-states_list.html', states=states)
 
 
